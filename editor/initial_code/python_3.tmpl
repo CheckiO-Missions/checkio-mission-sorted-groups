@@ -1,0 +1,23 @@
+{% comment %}New initial code template{% endcomment %}
+{% block env %}{% endblock env %}
+
+{% block start %}
+def sorted_groups(items: list[int]) -> list[int]:
+    # your code here
+    return []
+{% endblock start %}
+
+{% block example %}
+print('Example:')
+print(sorted_groups([5, 1, 5, 0, 5]))
+{% endblock %}
+
+{% block tests %}
+{% for t in tests %}
+assert {% block call %}sorted_groups({{t.input|p_args}})
+{% endblock %} == {% block result %}{{t.answer|p}}{% endblock %}{% endfor %}
+{% endblock %}
+
+{% block final %}
+print("The mission is done! Click 'Check Solution' to earn rewards!")
+{% endblock final %}

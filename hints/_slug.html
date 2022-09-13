@@ -1,0 +1,62 @@
+<body data-author="YOUR_CHECKIO_USERNAME">
+<div class="question-answer">
+    <div class="question">
+        I have no idea how to start solving this mission
+    </div>
+    <div class="answer">
+        <p>String in Python is an array of chars, or array of symbols. So the string "Hi" is an array of two elements "H" and "i". So almost all array functions work correctly with string.</p>
+
+        <p>So you goal is to convert number (int) into a sting, and then, find the length of that string (or find the length of arrat or chars)</p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Which function I'm looking for?
+    </div>
+    <div class="answer">
+        <p>Here is a list of all built-in functions in Python. <a target="_blank" href="https://docs.python.org/3/library/functions.html">https://docs.python.org/3/library/functions.html</a>. Try to check the list.</p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Can you please point me out?
+    </div>
+    <div class="answer">
+        <a target="_blank" href="https://docs.python.org/3/library/functions.html#len">len</a> is the function to find the length, and <a target="_blank" href="https://docs.python.org/3/library/functions.html#str">str</a> to conver any object to string.
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Ok. How can I use it then?
+    </div>
+    <div class="answer">
+        <pre class="brush: python">
+number = 56
+text = str(number)
+text_length = len(text)
+# the variable text_length now contains length of the string text
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        One last question. How my final solution will look like?
+    </div>
+    <div class="answer">
+        <pre class="brush: python">
+def number_length(number: int) -> int:
+    text = str(number)
+    return len(text)
+        </pre>
+
+        <p>Or you can do it in one line</p>
+
+        <pre class="brush: python">
+def number_length(number: int) -> int:
+    return len(str(number))
+        </pre>
+    </div>
+</div>
+
+
+</body>

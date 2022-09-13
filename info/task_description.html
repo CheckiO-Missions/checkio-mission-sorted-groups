@@ -1,0 +1,33 @@
+<!-- Describe task in general -->
+
+<p>
+    You are given {% if is_js %}an Array of numbers{% else %}a list of integers{% endif %}.
+    Your goal is find all sorted groups (group of numbers with distinct sorting order
+    or single value) inside the {% if is_js %}Array{% else %}list{% endif %}, sort input
+    {% if is_js %}Array{% else %}list{% endif %} by these groups and return this sorted
+    {% if is_js %}Array{% else %}list{% endif %} with groups unpacked. 
+</p>
+<p>
+    For example, [5, 1, 5, 0, 5] --> [[5, 1], [5, 0], [5]] --> [[5], [5, 0], [5, 1]] --> [5, 5, 0, 5, 1].
+</p>
+<p>
+    If adjacent numbers are equal, consider sorting order remains the same. If
+    a group starts with equal numbers, seek the different number further to 
+    determine sorting order, or end of the {% if is_js %}Array{% else %}list{% endif %}.
+    Good luck!
+</p>
+
+<!-- Explain input and output values -->
+<p>
+    <strong>Input:</strong> {% if is_js %}Array of numbers{% else %}List of integers{% endif %}.
+</p>
+
+<p>
+    <strong>Output:</strong> {% if is_js %}Array of numbers{% else %}List of integers{% endif %}.
+</p>
+
+<p>
+    <strong>Examples:</strong>
+</p>
+
+<pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
