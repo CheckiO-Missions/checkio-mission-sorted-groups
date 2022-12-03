@@ -14,6 +14,7 @@
     If adjacent numbers are equal, consider sorting order remains the same. If
     a group starts with equal numbers, seek the different number further to 
     determine or check sorting order, or end of the {% if is_js %}Array{% else %}list{% endif %}.
+    You should find out the sorting order for each group, not once for the whole {% if is_js %}Array{% else %}list{% endif %}. If the first group has the descending order, it doesn’t mean, you should build all you groups as descending. You should be greedy from the left - take as much numbers as possible to build and determine the sequence with distinct order. 
     Good luck!
 </p>
 
