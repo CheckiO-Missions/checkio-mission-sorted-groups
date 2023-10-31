@@ -1,22 +1,25 @@
 <!-- Describe task in general -->
 
-<p>
-    You are given {% if is_js %}an Array of numbers{% else %}a list of integers{% endif %}.
-    Your goal is to find all sorted groups (group of numbers with distinct sorting order
-    or single value) inside the {% if is_js %}Array{% else %}list{% endif %}, sort input
-    {% if is_js %}Array{% else %}list{% endif %} by these groups and return this sorted
-    {% if is_js %}Array{% else %}list{% endif %} with groups unpacked. 
-</p>
-<p>
-    For example, [5, 1, 5, 0, 5] --> [[5, 1], [5, 0], [5]] --> [[5], [5, 0], [5, 1]] --> [5, 5, 0, 5, 1].
-</p>
-<p>
-    If adjacent numbers are equal, consider sorting order remains the same. If
-    a group starts with equal numbers, seek the different number further to 
-    determine or check sorting order, or end of the {% if is_js %}Array{% else %}list{% endif %}.
-    You should find out the sorting order for each group, not once for the whole {% if is_js %}Array{% else %}list{% endif %}. If the first group has the descending order, it doesn’t mean, you should build all you groups as descending. You should be greedy from the left - take as much numbers as possible to build and determine the sequence with distinct order. 
-    Good luck!
-</p>
+<p>You are given a list of integers, and your goal is to perform the following steps:</p>
+<ol>
+    <li>Identify and group together all the sorted sequences within the list. A sorted sequence is a group of numbers that are arranged in either ascending or descending order.</li>
+    <li>Sort the input list by these groups while preserving the relative order of elements within each group.</li>
+    <li>Return the sorted list with the groups unpacked, meaning that the individual numbers from each group are in the final result, and their order reflects the sorted sequence within each group.</li>
+</ol>
+<p>For example, consider the input list [5, 1, 5, 0, 5]:</p>
+<ul>
+    <li>Group the numbers to obtain [[5, 1], [5, 0], [5]] (three groups are identified).</li>
+    <li>Sort each group independently while maintaining the relative order of elements within each group to get [[5], [5, 0], [5, 1]].</li>
+    <li>Unpack the groups to obtain the final sorted list: [5, 5, 0, 5, 1].</li>
+</ul>
+
+<p>Important Points:</p>
+<ul>
+    <li>When identifying sorted groups, adjacent equal numbers are considered part of the same group.</li>
+    <li>To determine the sorting order for each group, look for the first different number beyond the initial equal numbers. The sorting order for each group is not determined once for the entire list.</li>
+    <li>When building the groups, be greedy from the left, taking as many numbers as possible to create a distinct ordered sequence for each group.</li>
+</ul>
+<p>Good luck with your task!</p>
 
 <!-- Explain input and output values -->
 <p>
