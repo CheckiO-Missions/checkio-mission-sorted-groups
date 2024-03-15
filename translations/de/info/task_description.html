@@ -1,0 +1,37 @@
+<!-- Describe task in general -->
+
+<p>Sie erhalten eine Liste ganzer Zahlen und Ihr Ziel ist es, die folgenden Schritte auszuführen:</p>
+<ol>
+    <li>Identifizieren und gruppieren Sie alle sortierten Sequenzen innerhalb der Liste. Eine sortierte Folge ist eine Gruppe von Zahlen, die entweder in aufsteigender oder absteigender Reihenfolge angeordnet sind.</li>
+    <li>Sortieren Sie die Eingabeliste nach diesen Gruppen und behalten Sie dabei die relative Reihenfolge der Elemente innerhalb jeder Gruppe bei.</li>
+    <li>Geben Sie die sortierte Liste zurück, wobei die Gruppen entpackt sind, d.h. die einzelnen Zahlen aus jeder Gruppe sind im Endergebnis enthalten und ihre Reihenfolge entspricht der sortierten Reihenfolge innerhalb jeder Gruppe.</li>
+</ol>
+<p>Nehmen wir zum Beispiel die Eingabeliste [5, 1, 5, 0, 5]:</p>
+<ul>
+    <li>Gruppieren Sie die Zahlen, um [[5, 1], [5, 0], [5]] zu erhalten (drei Gruppen werden identifiziert).</li>
+    <li>Sortieren Sie jede Gruppe unabhängig voneinander und behalten Sie dabei die relative Reihenfolge der Elemente innerhalb jeder Gruppe bei, um [[5], [5, 0], [5, 1]] zu erhalten.</li>
+    <li>Entpacken Sie die Gruppen, um die endgültige sortierte Liste zu erhalten: [5, 5, 0, 5, 1].</li>
+</ul>
+
+<p>Wichtige Punkte:</p>
+<ul>
+    <li>Bei der Identifizierung von sortierten Gruppen werden benachbarte gleiche Zahlen als Teil der gleichen Gruppe betrachtet.</li>
+    <li>Um die Sortierreihenfolge für jede Gruppe zu bestimmen, suchen Sie nach der ersten unterschiedlichen Zahl nach den anfänglichen gleichen Zahlen. Die Sortierreihenfolge für jede Gruppe wird nicht einmal für die gesamte Liste festgelegt.</li>
+    <li>Seien Sie bei der Bildung der Gruppen von links gierig und nehmen Sie so viele Zahlen wie möglich, um eine eindeutige Reihenfolge für jede Gruppe zu erstellen.</li>
+</ul>
+<p>Viel Glück bei Ihrer Aufgabe!</p>
+
+<!-- Explain input and output values -->
+<p>
+   <strong>Eingabe:</strong> {% if is_js %}Array mit Zahlen{% else %}Liste mit ganzen Zahlen{% endif %}.
+</p>
+
+<p>
+   <strong>Ausgabe:</strong> {% if is_js %}Array von Zahlen{% else %}Liste von ganzen Zahlen{% endif %}.
+</p>
+
+<p>
+    <strong>Beispiele:</strong>
+</p>
+
+<pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
