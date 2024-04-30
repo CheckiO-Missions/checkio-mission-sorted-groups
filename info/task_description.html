@@ -9,13 +9,13 @@
 <p>For example, consider the input list [5, 1, 5, 0, 5]:</p>
 <ul>
     <li>Group the numbers to obtain [[5, 1], [5, 0], [5]] (three groups are identified).</li>
-    <li>Sort each group independently while maintaining the relative order of elements within each group to get [[5], [5, 0], [5, 1]].</li>
+    <li>Sort the input list by groups while maintaining the relative order of elements within each group to get [[5], [5, 0], [5, 1]].</li>
     <li>Unpack the groups to obtain the final sorted list: [5, 5, 0, 5, 1].</li>
 </ul>
 
 <p>Important Points:</p>
 <ul>
-    <li>When identifying sorted groups, adjacent equal numbers are considered part of the same group.</li>
+    <li>When identifying sorted groups, adjacent equal numbers are considered part of the same group and keep previously detected order.</li>
     <li>To determine the sorting order for each group, look for the first different number beyond the initial equal numbers. The sorting order for each group is not determined once for the entire list.</li>
     <li>When building the groups, be greedy from the left, taking as many numbers as possible to create a distinct ordered sequence for each group.</li>
 </ul>
