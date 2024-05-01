@@ -1,0 +1,45 @@
+<!-- Describe task in general -->
+
+<p>Otrzymuje Pan/Pani listę liczb całkowitych, a Pana/Pani zadaniem jest wykonanie następujących kroków:</p>
+<ul>
+    <li>Proszę zidentyfikować i pogrupować wszystkie posortowane sekwencje na liście. Posortowana sekwencja to grupa liczb ułożonych w porządku rosnącym lub malejącym.</li>
+    <li>Proszę posortować listę wejściową według tych grup, zachowując względną kolejność elementów w każdej grupie.</li>
+    <li>Proszę zwrócić posortowaną listę z rozpakowanymi grupami, co oznacza, że poszczególne liczby z każdej grupy znajdują się w końcowym wyniku, a ich kolejność odzwierciedla posortowaną sekwencję w każdej grupie.</li>
+</ul>
+<p>Na przykład, proszę rozważyć listę wejściową <code>[5, 1, 5, 0, 5]</code>:</p>
+<ul>
+    <li>Proszę pogrupować liczby, aby uzyskać <code>[[5, 1], [5, 0], [5]]</code> (zidentyfikowano trzy grupy).</li>
+    <li>Posortuj listę wejściową według grup, zachowując względną kolejność elementów w każdej grupie, aby uzyskać <code>[[5], [5, 0], [5, 1]]</code>.</li>
+    <li>Proszę rozpakować grupy, aby uzyskać ostateczną posortowaną listę: <code>[5, 5, 0, 5, 1]</code>.</li>
+</ul>
+
+<p style="text-align: justify;">
+    Spójrzmy na inny przykład w widoku schematu:
+</p>
+
+<p style="text-align: center;">
+    <img  title="example" src="{{MEDIA}}sort-sorted-groups.svg" alt="example" style="max-height: 300px"/>
+</p>
+
+<p>Ważne punkty:</p>
+<ul>
+    <li>Podczas identyfikowania posortowanych grup, sąsiadujące równe liczby są uważane za część tej samej grupy i zachowują wcześniej wykrytą kolejność.</li>
+    <li>Aby określić kolejność sortowania dla każdej grupy, należy poszukać pierwszej różnej liczby poza początkowymi równymi liczbami. Kolejność sortowania dla każdej grupy nie jest określana raz dla całej listy.</li>
+    <li>Tworząc grupy, proszę być chciwym od lewej strony, biorąc jak najwięcej liczb, aby utworzyć wyraźną uporządkowaną sekwencję dla każdej grupy.</li>
+</ul>
+<p>Życzymy powodzenia!</p>
+
+<!-- Explain input and output values -->
+<p>
+   <strong>Dane wejściowe:</strong> {% if is_js %}Tablica liczb{% else %}Lista liczb całkowitych{% endif %}.
+</p>
+
+<p>
+   <strong>Wyjście:</strong> {% if is_js %}Tablica liczb{% else %}Lista liczb całkowitych{% endif %}.
+</p>
+
+<p>
+    <strong>Przykłady:</strong>
+</p>
+
+<pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
