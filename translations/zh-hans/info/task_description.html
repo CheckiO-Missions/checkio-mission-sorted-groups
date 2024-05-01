@@ -1,0 +1,45 @@
+<!-- Describe task in general -->
+
+<p>给你一个整数列表，你的目标是完成以下步骤：</p>
+<ul>
+    <li>找出列表中的所有排序序列，并将它们组合在一起。排序序列是按升序或降序排列的一组数字。</li>
+    <li>根据这些分组对输入列表进行排序，同时保留每个分组内元素的相对顺序。</li>
+    <li>在返回排序后的列表时，将各组解压缩，这意味着每个组中的单个数字都会出现在最终结果中，它们的顺序反映了每个组内的排序序列。</li>
+</ul>
+<p>例如，考虑输入列表<code>[5, 1, 5, 0, 5]</code> ：</p>
+<ul>
+    <li>将数字分组，得到<code>[[5, 1], [5, 0], [5]]</code> （确定了三个组）。</li>
+    <li>按组对输入列表排序，同时保持各组内元素的相对顺序，得到<code>[[5], [5, 0], [5, 1]]</code> 。</li>
+    <li>解压缩分组，得到最终的排序列表：<code>[5, 5, 0, 5, 1]</code>.</li>
+</ul>
+
+<p style="text-align: justify;">
+    我们再来看一个方案视图中的例子：
+</p>
+
+<p style="text-align: center;">
+    <img  title="example" src="{{MEDIA}}sort-sorted-groups.svg" alt="example" style="max-height: 300px"/>
+</p>
+
+<p>要点</p>
+<ul>
+    <li>在识别排序组时，相邻的相等数字被视为同一组的一部分，并保持之前检测到的顺序。</li>
+    <li>要确定每组的排序顺序，应查找初始相等数字之外的第一个不同数字。每个组的排序顺序不会一次确定整个列表的排序顺序。</li>
+    <li>在分组时，要从左侧开始贪心地尽可能多取数字，为每组创建一个不同的有序序列。</li>
+</ul>
+<p>祝你好运</p>
+
+<!-- Explain input and output values -->
+<p>
+   <strong>输入：</strong> {% if is_js %}数字数组{% else %}整数列表{% endif %}.
+</p>
+
+<p>
+   <strong>输出：</strong> {% if is_js %}数字数组{% else %}整数列表{% endif %}.
+</p>
+
+<p>
+    <strong>示例</strong>
+</p>
+
+<pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
