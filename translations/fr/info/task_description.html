@@ -1,0 +1,45 @@
+<!-- Describe task in general -->
+
+<p>On vous donne une liste d'entiers et votre objectif est de réaliser les étapes suivantes:</p>
+<ul>
+    <li>Identifiez et regroupez toutes les séquences triées de la liste. Une séquence triée est un groupe de nombres disposés dans un ordre croissant ou décroissant.</li>
+    <li>Triez la liste d'entrée en fonction de ces groupes tout en préservant l'ordre relatif des éléments au sein de chaque groupe.</li>
+    <li>Renvoyez la liste triée avec les groupes décompressés, ce qui signifie que les nombres individuels de chaque groupe se trouvent dans le résultat final et que leur ordre reflète la séquence triée à l'intérieur de chaque groupe.</li>
+</ul>
+<p>Par exemple, considérez la liste d'entrée <code>[5, 1, 5, 0, 5]</code>:</p>
+<ul>
+    <li>Regroupez les numéros pour obtenir <code>[[5, 1], [5, 0], [5]]</code> (trois groupes sont identifiés).</li>
+    <li>Triez la liste d'entrée par groupes tout en conservant l'ordre relatif des éléments au sein de chaque groupe pour obtenir <code>[[5], [5, 0], [5, 1]]</code>.</li>
+    <li>Décompressez les groupes pour obtenir la liste triée finale: <code>[5, 5, 0, 5, 1]</code>.</li>
+</ul>
+
+<p style="text-align: justify;">
+    Examinons un autre exemple dans une vue d'un schéma:
+</p>
+
+<p style="text-align: center;">
+    <img  title="example" src="{{MEDIA}}sort-sorted-groups.svg" alt="example" style="max-height: 300px"/>
+</p>
+
+<p>Points importants:</p>
+<ul>
+    <li>Lors de l'identification des groupes triés, les nombres égaux adjacents sont considérés comme faisant partie du même groupe et conservent l'ordre précédemment détecté.</li>
+    <li>Pour déterminer l'ordre de tri de chaque groupe, recherchez le premier nombre différent au-delà des nombres égaux initiaux. L'ordre de tri de chaque groupe n'est pas déterminé une seule fois pour toute la liste.</li>
+    <li>Lorsque vous construisez les groupes, soyez gourmand en partant de la gauche, en prenant autant de chiffres que possible pour créer une séquence ordonnée distincte pour chaque groupe.</li>
+</ul>
+<p>Bonne chance!</p>
+
+<!-- Explain input and output values -->
+<p>
+   <strong>Entrée:</strong> {% if is_js %}Tableau de nombres{% else %}Liste d'entiers{% endif %}.
+</p>
+
+<p>
+   <strong>Sortie:</strong> {% if is_js %}Tableau de nombres{% else %}Liste d'entiers{% endif %}.
+</p>
+
+<p>
+    <strong>Exemples:</strong>
+</p>
+
+<pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
